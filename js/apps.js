@@ -7,7 +7,7 @@ $(document).ready(function() {
 		{
 			question: "The Walking Dead series take place in which state?",
 			choices: ["New York", "Idaho", "Georgia", "Texas"],
-			questNum: 0,
+			questNum: "1.",
 			correct: 2,
 			fact: ""
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		{
 			question: "When the zombie apocalypse started, where was Rick?",
 			choices: ["in the hospital", "with his family", "in Atlanta", "outside killing zombies"],
-			questNum: 1,
+			questNum: "2. ",
 			correct: 0,
 			fact: ""
 		},
@@ -24,7 +24,7 @@ $(document).ready(function() {
 		{
 			question: "Which character chose to stay back at the CDC to die from the facility's explosion",
 			choices: ["Merle", "Jim", "Amy", "Jacqui"],
-			questNum: 2,
+			questNum: "3. ",
 			correct: 3,
 			fact: ""
 		},
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		{
 			question: "Why did Otis accidentally shoot Carl?",
 			choices: ["he thought Carl was a walker", "Carl was annoying", "he was shooting a deer", "Carl was next to a walker"],
-			questNum: 3,
+			questNum: "4. ",
 			correct: 2,
 			fact: ""
 		},
@@ -40,7 +40,7 @@ $(document).ready(function() {
 		{
 			question: "Which two characters' deaths were caused by Shane?",
 			choices: ["Otis & Randall", "Otis & John", "Dale & Jimmy", "Jimmy & Patricia"],
-			questNum: 4,
+			questNum: "5. ",
 			correct: 0,
 			fact: ""
 		},
@@ -48,7 +48,7 @@ $(document).ready(function() {
 		{
 			question: "Who was bitten in the neck at the prison and sacrificed his/her life to save Carol?",
 			choices: ["Oscar", "Axel", "Lori", "T-Dog"],
-			questNum: 5,
+			questNum: "6. ",
 			correct: 3,
 			fact: ""
 		},
@@ -56,7 +56,7 @@ $(document).ready(function() {
 		{
 			question: "When Rick, Michonne, and Carl returned to Rick's hometown, they ran into an old friend from season one. Who was he?",
 			choices: ["Duane", "The Governor", "Morgan", "Shane"],
-			questNum: 6,
+			questNum: "7. ",
 			correct: 2,
 			fact: ""
 		},
@@ -64,7 +64,7 @@ $(document).ready(function() {
 		{
 			question: "How did Hershel die?",
 			choices: ["he was decapitated", "he was bitten by a walker", "he was shot", "he lost another leg"],
-			questNum: 7,
+			questNum: "8. ",
 			correct: 0,
 			fact: ""
 		},
@@ -72,7 +72,7 @@ $(document).ready(function() {
 		{
 			question: "Who killed the Governor?",
 			choices: ["Rick", "Maggie", "Michonne", "Lilly"],
-			questNum: 8,
+			questNum: "9. ",
 			correct: 3,
 			fact: ""
 		},
@@ -80,8 +80,8 @@ $(document).ready(function() {
 		{
 			question: "What do the people of Woodbury call the zombies?",
 			choices: ["scary zombies", "walkers", "biters", "geeks"],
-			questNum: 9,
-			correct: 3,
+			questNum: "10. ",
+			correct: 2,
 			fact: ""
 		}
 
@@ -100,7 +100,7 @@ $(document).ready(function() {
 
 	}
 
-	//Fade Page In Intro
+	//Fade In Jumbotron Intro
 	var fadeIntro = function () {
 
 		$('.intro').fadeIn(5000);	
@@ -118,20 +118,36 @@ $(document).ready(function() {
 	var submitAnswer = function () {
 
 		var answer = $("input[type='radio']:checked").val();
-		alert(answer);
+		
+		if ( answer == questions[currentQuestion].correct ) {
+			alert("Correct!!!");
+			numCorrect ++;
+		}
+
+		else {
+			alert("Wrong!!!");
+		}
+
+		currentQuestion ++;
+		nextQuestion();
 
 	}
 
 	//Next Question Function
 	var nextQuestion = function () {
 
-		var newQuestion = '<h2>' + questions[currentQuestion].question + '</h2>';
+		var newQuestion = '<h2>' + questions[currentQuestion].questNum + questions[currentQuestion].question + '</h2>';
 		var newChoices = '<input type="radio" name="option" value="0"> ' + questions[currentQuestion].choices[0] + '<br><input type="radio" name="option" value="1"> ' + questions[currentQuestion].choices[1] + '<br><input type="radio" name="option" value="2"> ' + questions[currentQuestion].choices[2] + '<br><input type="radio" name="option" value="3"> ' + questions[currentQuestion].choices[3];
 		$('.question-wrapper').html(newQuestion);
-		$('.answer-wrapper .row .col-xs-12').html(newChoices);
+		$('.answer-wrapper').html(newChoices);
 
 	}
 
+	//Play Intro Theme
+	playIntro();
+
+	//Fade In Jumbotron Intro	
+	fadeIntro();	
 
 	//Start Quiz
 	$('.startBtn').click(function () {
@@ -146,12 +162,6 @@ $(document).ready(function() {
 		submitAnswer();
 
 	});
-
-	//Play Intro Theme
-	playIntro();
-
-	//Fade In Jumbotron Intro	
-	fadeIntro();	
 
 
 
