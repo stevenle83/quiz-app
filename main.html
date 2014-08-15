@@ -5,73 +5,76 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 
-	<body>
+	<body id="page">
+
+		<div class="quiz">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-6">
+
+						<div class="question-wrapper margin-top">
+						
+							<h2>Where does the series take place?</h2>
+
+						</div>	
+
+						<div class="answer-wrapper margin-top">
+								
+							<input type="radio" name="option" value="0"> New York
+							<br>
+							<input type="radio" name="option" value="1"> Idaho
+							<br>						
+							<input type="radio" name="option" value="2"> Georgia
+							<br>
+							<input type="radio" name="option" value="3"> Texas
 		
-		<div class="container">
-			
-			<div class="row">
-				
-				<div class="col-xs-12">
-					
-					<div class="jumbotron">
-								
-						<div class="intro center">
-								
-							<h1>The Walking Dead Trivia</h1>
-							
-							<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, odit, tenetur. Quidem et eligendi ullam modi vel assumenda, molestias illo tenetur aperiam aspernatur exercitationem aliquid placeat labore corporis rerum reiciendis.</p>
-							
-							<button type="button" class="btn btn-primary btn-lg" id="startBtn">Get Started</button>
-							
 						</div>
 
-						<div class="question1 display">
-							
-							<h2 class="center">Question # 1: Where does the series take place?</h2>
-							
-							<form class="radio">	
+						<div class="submit-wrapper margin-top">
 
-								<input type="radio" name="option"> Georgia
-								<br>
-								<input type="radio" name="option"> Alabama
-								<br>
-								<input type="radio" name="option"> Texas
-								<br>
-								<input type="radio" name="option"> Louisiana
-
-							</form>	
-							
-							<div class="center">
-								<button type="button" class="btn btn-primary btn-lg" id="submit">Submit</button>
-							</div>	
+							<input type="submit" id="submit" value="Submit Answer">
 
 						</div>
 
 					</div>
 
-				</div>
+					<div class="col-xs-12 col-sm-6 hidden-xs">
+
+						<img src="image/image2.jpeg" alt="">
+						
+					</div>		
+
+				</div>	
 
 			</div>
 
-		</div>
+		</div>	
+		
+		<div class="intro center">
 
-	
+			<div class="container">
 
+				<div class="jumbotron">
 
+					<h1 class="text-uppercase">The Walking Dead Trivia</h1>
 
+					<p class="text-uppercase lead">Test your knowledge of the "smashing hit series!"</p>
 
+				</div>	
+				
+				<button type="button" class="btn btn-danger btn-lg startBtn">Get Started</button>
 
+			</div>
 
+		</div>	
 
-
-
-
-
-
+		<audio id="theme" src="theme/twd.mp4"></audio>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>		
 		<script src="hhtp://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
