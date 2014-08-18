@@ -17,7 +17,7 @@ body {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	display: none;
+	display: ;
 	z-index: 1000;
 	background: #fff;
 }
@@ -42,13 +42,8 @@ body {
 	height: 70px;
 }
 
-.info {
-	background: black;
-}
 
-#infoImg {
-	width: 100%;
-	height: 600px;
-}
+
+
 
 
