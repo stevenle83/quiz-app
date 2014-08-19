@@ -19,7 +19,7 @@ body {
 .quiz {
 	font-size: 2em;
 	width: 100%;
-	height: 100%;
+	height: 1000px;
 	position: absolute;
 	display: none;
 	z-index: 1000;
