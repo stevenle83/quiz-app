@@ -2,6 +2,7 @@
 body {
 	background: url('../image/image.jpg') no-repeat center center fixed;
 	background-size: 100% 100%;
+	font-family: 'Galindo', cursive;
 }
 
 .center {
@@ -18,12 +19,13 @@ body {
 
 .quiz {
 	font-size: 2em;
+	color: #fff;
 	width: 100%;
 	height: 1000px;
 	position: absolute;
 	display: none;
 	z-index: 1000;
-	background: #fff;
+	background: black;
 }
 
 #submit {
@@ -37,12 +39,6 @@ body {
 .jumbotron {
 	background: rgba(6, 8, 10, 0.2);
 	color: rgba(255, 0, 0, .6);
-}
-
-.startBtn {
-	text-align: center;
-	width: 120px;
-	height: 70px;
 }
 
 .stat {
