@@ -119,7 +119,7 @@ $(document).ready(function() {
 	//Display Current Score Function
 	var displayScore = function () {
 
-		var score = numCorrect + " out of 10 correct.";
+		var score = "Score: " + numCorrect + " out of 10 Correct.";
 
 		$('#score').html(score);
 
@@ -128,9 +128,21 @@ $(document).ready(function() {
 	//Display Progress Function
 	var progress = function () {
 
-		var progress = "You are on question #" + questions[currentQuestion].questNum + " out of 10." 
+		var progress = "Question number " + questions[currentQuestion].questNum + " out of 10." 
 
 		$('#progress').html(progress);
+
+	}
+
+	//New Game Function
+	var newGame = function () {
+
+		numCorrect = 0;
+		currentQuestion = 0;
+		nextQuestion();
+		displayScore();
+		progress();
+		$('#result').html("Result:");
 
 	}
 
@@ -148,19 +160,19 @@ $(document).ready(function() {
 	var submitAnswer = function () {
 
 		var answer = $("input[type='radio']:checked").val();
-
+		
 		if ( answer == questions[currentQuestion].correct ) {
 
 			numCorrect ++;
-			$('#stat').html("You answered correctly!!!");
+			$('#result').html("Result: Correct!!!");
 
-		} 
+		}
 
 		else {
 
-			$('#stat').html("You answered incorrectly!!!");
+			$('#result').html("Result: Incorrect!!!");
 
-		} 	
+		} 
 
 		currentQuestion ++;
 		progress();
@@ -191,8 +203,12 @@ $(document).ready(function() {
 
 	});
 
+	//New Game
+	$('#new').click(function () {
 
+		newGame();
 
+	});
 
 
 

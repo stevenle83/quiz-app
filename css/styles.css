@@ -8,8 +8,12 @@ body {
 	text-align: center;
 }
 
-.margin-top {
+.margin-top-10 {
 	margin-top: 10%;
+}
+
+.margin-top-5 {
+	margin-top: 5%;
 }
 
 .quiz {
@@ -31,7 +35,6 @@ body {
 }
 
 .jumbotron {
-	margin-top: 5%;
 	background: rgba(6, 8, 10, 0.2);
 	color: rgba(255, 0, 0, .6);
 }
@@ -40,6 +43,11 @@ body {
 	text-align: center;
 	width: 120px;
 	height: 70px;
+}
+
+.stat {
+	font-weight: bold;
+	font-size: 150%;
 }
 
 
