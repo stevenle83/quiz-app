@@ -121,7 +121,7 @@ $(document).ready(function() {
 
 		} else if ( numCorrect > 2 && numCorrect <= 4 ) {
 
-			$('#result').html("You are a Walkind Dead Noobie!");
+			$('#result').html("You are a Walking Dead Noobie!");
 
 		} else if ( numCorrect > 4 && numCorrect <= 6 ) {
 
