@@ -129,7 +129,7 @@ $(document).ready(function() {
 
 		} else if ( numCorrect > 6 && numCorrect <= 8 ) {
 
-			$('#result').html("You know your Walkind Dead!");
+			$('#result').html("You know your Walking Dead!");
 
 		} else {
 
