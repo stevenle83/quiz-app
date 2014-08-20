@@ -241,19 +241,5 @@ $(document).ready(function() {
 		newGame();
 
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 });
