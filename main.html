@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
+	<!DOCTYPE html>
+<html lang="en">
+
 	<head>
+		<link href='http://fonts.googleapis.com/css?family=Galindo' rel='stylesheet' type='text/css'>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/styles.css">
-	</head>
+	</head>	
 
-	<body id="page">
+	<body>
 
 		<div class="quiz">
 
-			<div class="container">
+			<div class="container-fluid">
 
 				<div class="row">
 
 					<div class="col-xs-12 col-sm-6">
 
-						<div class="question-wrapper margin-top">
+						<div class="question-wrapper margin-top-10 yellow">
 						
-							<h2>Where does the series take place?</h2>
+							<h2>After the attack on the prison which caused the group's seperation, Glenn returns to the prison and finds who?</h2>
 
 						</div>	
 
-						<div class="answer-wrapper margin-top">
+						<div class="answer-wrapper margin-top-10 green">
 								
-							<input type="radio" name="option" value="0"> New York
+							<input type="radio" name="option" value="0"> Lizzie
 							<br>
-							<input type="radio" name="option" value="1"> Idaho
+							<input type="radio" name="option" value="1"> Lilly
 							<br>						
-							<input type="radio" name="option" value="2"> Georgia
+							<input type="radio" name="option" value="2"> Tara
 							<br>
-							<input type="radio" name="option" value="3"> Texas
+							<input type="radio" name="option" value="3"> Carol
 		
 						</div>
 
-						<div class="submit-wrapper margin-top">
+						<div class="submit-wrapper margin-top-10">
 
 							<input type="submit" id="submit" value="Submit Answer">
 
@@ -44,10 +48,32 @@
 
 					</div>
 
-					<div class="col-xs-12 col-sm-6 hidden-xs">
-
-						<img src="image/image2.jpeg" alt="">
+					<div class="col-xs-12 col-sm-6 stat margin-top-5">
 						
+						<div id="progress" class="green">
+							
+							Question Number 1 Out Of 10.
+
+						</div>
+
+						<div id="score" class=" yellow margin-top-5">
+							
+							Score: 0 Out Of 10 Correct
+
+						</div>
+
+						<div id="result" class="green margin-top-5">
+							
+							Result: 
+
+						</div>
+						
+						<div>
+
+							<button type="button" class="btn btn-danger btn-lg margin-top-5" id="new">New Game</button>
+						
+						</div>
+
 					</div>		
 
 				</div>	
@@ -60,15 +86,13 @@
 
 			<div class="container">
 
-				<div class="jumbotron">
+				<div class="jumbotron margin-top-10 yellow">
 
 					<h1 class="text-uppercase">The Walking Dead Trivia</h1>
 
-					<p class="text-uppercase lead">Test your knowledge of the "smashing hit series!"</p>
-
 				</div>	
 				
-				<button type="button" class="btn btn-danger btn-lg startBtn">Get Started</button>
+				<button type="button" class="btn btn-default btn-lg startBtn yellow">Get Started</button>
 
 			</div>
 
