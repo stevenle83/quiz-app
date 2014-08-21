@@ -125,7 +125,7 @@ $(document).ready(function() {
 
 		} else if ( numCorrect > 4 && numCorrect <= 6 ) {
 
-			$('#result').html("You must watch a lot of Walkding Dead!");
+			$('#result').html("You must watch a lot of Walking Dead!");
 
 		} else if ( numCorrect > 6 && numCorrect <= 8 ) {
 
