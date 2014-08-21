@@ -1,7 +1,17 @@
+html {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
 
 body {
 	background: url('../image/image.jpg') no-repeat center center fixed;
-	background-size: 100% 100%;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
 	font-family: 'Galindo', cursive;
 }
 
@@ -30,6 +40,10 @@ body {
 	color: rgba(253, 226, 96, 0.7);
 }
 
+.white {
+	color: rgba(207, 251, 220, 0.9);
+}
+
 .quiz {
 	font-size: 2em;
 	width: 100%;
@@ -46,7 +60,7 @@ body {
 }
 
 #new {
-	background: rgba(253, 226, 96, 0.9);
+	background: rgba(106, 175, 88, 0.9);
 	color: rgba(6, 8, 10, 1);
 	margin-bottom: 2%;
 }
